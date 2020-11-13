@@ -41,7 +41,7 @@ while($Result = mysqli_fetch_array($res))
 mysqli_close($conn);
 ?>
 <div class="container">
-  <h2>Button Tags</h2>
-  <a href="#" class="btn btn-info" role="button">Link Button</a>
+  <h2>Insert Data</h2>
+  <a href="https://itf-224-db.azurewebsites.net/form.html" class="btn btn-info" role="button">Click here</a>
 </body>
 </html>
