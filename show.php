@@ -43,5 +43,6 @@ mysqli_close($conn);
 <div "col-md-4 text-center">
   <h2>Insert Data</h2>
   <a href="https://itf-224-db.azurewebsites.net/form.html" class="btn btn-info" role="button">Click here</a>
+</div>
 </body>
 </html>
