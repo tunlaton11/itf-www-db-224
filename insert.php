@@ -17,7 +17,7 @@ $sql = "INSERT INTO guestbook (Name , Comment , Link) VALUES ('$name', '$comment
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully \n Check updated -->>";
+    echo "New record created successfully /n Check updated -->>";
     echo '<a href="https://itf-224-db.azurewebsites.net/show.php">CLICK HERE</a>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
