@@ -12,54 +12,54 @@
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itf-224-db-lab.mysql.database.azure.com', 'tunlaton11@itf-224-db-lab', 'Kaozaa0089', 'itflab', 3306);
-if (mysqli_connect_errno($conn))
+if (!$conn)
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<table class="table table-dark table-striped">
-  <tr>
-    <th width="100"> <div align="center">Name</div></th>
-    <th width="350"> <div align="center">Comment </div></th>
-    <th width="150"> <div align="center">Link </div></th>
-  </tr>
+<div class="container">
+    <h1>Guestbook</h1>
+    <table class="table table-responsive-md">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Comment</th>
+                <th scope="col">Link</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
 <?php
-while($Result = mysqli_fetch_array($res))
+while($row = mysqli_fetch_array($res))
 {
 ?>
-    <tbody>
-      <tr>
-        <td><?php echo $Result['Name'];?></div></td>
-        <td><?php echo $Result['Comment'];?></td>
-        <td><?php echo $Result['Link'];?></td>
-        <td>
-            <div class="d-inline">
-                <form action="edit_form.php" method="post" class="d-inline">
-                    <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                    <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
-                </form>
-                <form action="delete.php" method="post" class="d-inline">
-                    <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
-                    <button type="submit" class="btn btn-sm btn-danger mb-1">Delete</button>
-                </form>
-             </div>
-         </td>
-      </tr>
-    </tbody>
+        <tbody>
+            <tr>
+                <td><?php echo $row['Name'];?></div></td>
+                <td><?php echo $row['Comment'];?></td>
+                <td><?php echo $row['Link'];?></td>
+                <td>
+                    <div class="d-inline">
+                        <form action="edit_form.php" method="post" class="d-inline">
+                            <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                            <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
+                        </form>
+                        <form action="delete.php" method="post" class="d-inline">
+                            <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                            <button type="submit" class="btn btn-sm btn-danger mb-1">Delete</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
 <?php
 }
-?>
-</table>
-<?php
 mysqli_close($conn);
 ?>
-<div class="container">
-  <div class="row">
-    <div class="col text-center">
-      <a href="https://itf-224-db.azurewebsites.net/form.html" class="btn btn-info" role="button">Insert Data</a>
+    </table>
+    <div class="text-center">
+        <a href="form.php" class="btn btn-primary">Insert</a>
     </div>
-  </div>
 </div>
 </body>
 </html>
