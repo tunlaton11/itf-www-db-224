@@ -13,8 +13,8 @@ $sql = "DELETE FROM guestbook WHERE ID='$ID'";
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully!!    Check updated -->>";
-    echo '<a href="https://itf-224-db.azurewebsites.net/show.php">CLICK HERE</a>';
+    echo "Deleted successfully!!    Check updated -->>";
+    echo '<a href="https://itf-224-db.azurewebsites.net/index.php">CLICK HERE</a>';
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
