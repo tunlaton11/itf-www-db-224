@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITF Database Lab</title>
+    <title>Edit data</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,17 +28,17 @@ $comment = mysqli_fetch_array($res);
             <div class="form-group">
                 <label for="inputName">Name</label>
                 <?php
-                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Enter Name" value="'.$comment["Name"].'">'
+                    echo '<input type="text" name="name" id="inputName" class="form-control" placeholder="Edit Name" value="'.$comment["Name"].'">'
                 ?>
             </div>
             <div class="form-group">
                 <label for="inputComment">Comment</label>
-                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Enter Comment"><?php echo $comment['Comment'];?></textarea>
+                <textarea name="comment" class="form-control" id="inputComment" rows="3" placeholder="Edit Comment"><?php echo $comment['Comment'];?></textarea>
             </div>
             <div class="form-group">
                 <label for="inputLink">Link</label>
                 <?php
-                    echo '<input type="text" name="link" id="inputLink" class="form-control" placeholder="Enter Name" value="'.$comment["Link"].'">'
+                    echo '<input type="text" name="link" id="inputLink" class="form-control" placeholder="Edit Link" value="'.$comment["Link"].'">'
                 ?>
             </div>
             <div class="mt-4">
