@@ -23,7 +23,7 @@ $comment = mysqli_fetch_array($res);
 ?>
     <div class="container">
         <h1>Edit Data</h1>
-        <form action="update.php" method="post" class="mt-4">
+        <form action="insert.php" method="post" class="mt-4">
             <input type="hidden" name="ID" value=<?php echo $comment['ID'];?>>
             <div class="form-group">
                 <label for="inputName">Name</label>
