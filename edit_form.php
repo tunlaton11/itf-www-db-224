@@ -43,7 +43,7 @@ $comment = mysqli_fetch_array($res);
             </div>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary mr-1">Save</button>
-                <a role="button" class="btn btn-secondary" href="https://itf-224-db.azurewebsites.net/show.php">Back</a>
+                <a role="button" class="btn btn-secondary" href=index.php">Back</a>
             </div>
         </form>
     </div>
