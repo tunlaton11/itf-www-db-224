@@ -23,7 +23,7 @@ $comment = mysqli_fetch_array($res);
 ?>
     <div class="container">
         <h1>Edit Data</h1>
-        <form action="insert.php" method="post" class="mt-4">
+        <form action="update.php" method="post" class="mt-4">
             <input type="hidden" name="ID" value=<?php echo $comment['ID'];?>>
             <div class="form-group">
                 <label for="inputName">Name</label>
@@ -43,7 +43,7 @@ $comment = mysqli_fetch_array($res);
             </div>
             <div class="mt-4">
                 <button type="submit" class="btn btn-primary mr-1">Save</button>
-                <a role="button" class="btn btn-secondary" href="https://itf-224-db.azurewebsites.net/insert.php">Back</a>
+                <a role="button" class="btn btn-secondary" href="https://itf-224-db.azurewebsites.net/show.php">Back</a>
             </div>
         </form>
     </div>
