@@ -32,6 +32,18 @@ while($Result = mysqli_fetch_array($res))
     <td><?php echo $Result['Name'];?></div></td>
     <td><?php echo $Result['Comment'];?></td>
     <td><?php echo $Result['Link'];?></td>
+    <td>
+        <div class="d-inline">
+            <form action="edit_form.php" method="post" class="d-inline">
+                <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                <button type="submit" class="btn btn-sm btn-primary mb-1">Edit</button>
+            </form>
+            <form action="delete.php" method="post" class="d-inline">
+                <input type="hidden" name="ID" value=<?php echo $row['ID'];?>>
+                <button type="submit" class="btn btn-sm btn-danger mb-1">Delete</button>
+            </form>
+         </div>
+     </td>
   </tr>
 <?php
 }
