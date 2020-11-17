@@ -19,8 +19,8 @@ if (!$conn)
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container">
-    <h1>Guestbook</h1>
-    <table class="table table-responsive-md">
+    <h1>DB 63070224</h1>
+    <table class="blueTable">
         <thead>
             <tr>
                 <th scope="col">Name</th>
